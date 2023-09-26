@@ -1,118 +1,294 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { BsArrowRight } from "react-icons/bs";
+import { SiTailwindcss, SiExpress, SiMysql } from "react-icons/si";
+import {
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoReact,
+  BiLogoMongodb,
+} from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import Portfolios from "@/components/Portfolios";
+import Image from "next/image";
+import Gradient2 from "@/./assets/images/Gradient2.png";
+import Gradient3 from "@/./assets/images/Gradient3.png";
+import DigitalPa from "@/assets/projects/project-digitalpa.webp";
+import Suma from "@/assets/projects/project-suma.webp";
+import TheButterfly from "@/assets/projects/project-thebutterfly.webp";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="bg-[#091427] font-poppins">
+      <section className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative md:mb-32 mb-16">
+        <div className=" md:py-10  ">
+          <Navbar />
+
+          <div className="container px-4 md:px-24 flex md:flex-row flex-col-reverse gap-y-4">
+            <div className="">
+              <h1 className="text-[#868490] text-xl md:text-3xl font-semibold md:mb-10 mb-5 hidden md:block">
+                FULLSTACK WEB DEVELOPER
+              </h1>
+
+              <div className="md:flex flex-col gap-y-4 mb-8 hidden">
+                <span className="font-semibold text-white text-2xl md:text-4xl  ">
+                  Ilham Danu
+                </span>
+                <div className=" border-b-4 rounded border-[#F8E7A1] w-max md:w-52 mb-3"></div>
+              </div>
+
+              <p className="text-[#868490] md:text-xl md:leading-9 leading-6 mb-9 md:w-2/3">
+                An adaptive and fast learner Fullstack Developer. Now using
+                React, React Native, Express to develop web and mobile apps.
+                Have made several projects such as an e-wallet web app using
+                Next, ticket movie web & mobile app using React, and more. Also
+                can work well as part of team, hardworker and eager to learn.
+              </p>
+
+              <div className="flex items-center gap-x-10">
+                <span className="text-xl text-[#F8E7A1] ">Let's Talk</span>
+                <BsArrowRight className="w-6 h-6 text-[#F8E7A1]" />
+              </div>
+            </div>
+
+            <div className="">
+              <img src="/Profile.png" alt="profile" className=" " />
+            </div>
+
+            <div className="md:hidden">
+              <h1 className="text-[#868490] text-xl md:text-3xl font-semibold ">
+                FULLSTACK WEB DEVELOPER
+              </h1>
+
+              <div className="flex flex-col gap-y-4">
+                <span className="font-semibold text-white text-2xl md:text-4xl  ">
+                  Ilham Danu
+                </span>
+                <div className=" border-b-4 rounded border-[#F8E7A1] w-max md:w-52 mb-3"></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="relative">
+        <div className="absolute  md:-top-36 top-40 z-0">
+          <Image src={Gradient2} alt="gradient" />
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      {/* Tagline 1*/}
+      <section className="mb-16">
+        {/* Desktop */}
+        <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+          <div className="md:text-2xl lg:text-3xl uppercase font-syne text-white">
+            <h2 className="md:mb-5 text-center">
+              <i>" From Vision to Reality</i>
+            </h2>
+            <h2 className="md:mb-5">
+              <i>
+                engineered to{" "}
+                <span className="text-primary">
+                  propel your business into the
+                </span>
+              </i>
+            </h2>
+            <h2>
+              <i className="text-center text-primary">
+                forefront of innovation.
+              </i>{" "}
+              "
+            </h2>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white font-bold lg:hidden text-center">
+          <h2>
+            <i>
+              " From Vision to Reality{" "}
+              <span className="text-primary">Build High Performance Ads </span>
+              engineered to{" "}
+              <span className="text-primary">
+                propel your business into the{" "}
+              </span>
+              <span className="text-center text-primary">
+                forefront of innovation.
+              </span>{" "}
+              "
+            </i>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+    {/* Technologies */}
+      <section className="md:mb-32 mb-16 relative">
+        <div className="px-4 md:px-0 ">
+          <div className="flex flex-col justify-center items-center gap-y-2">
+            <h1 className="text-white text-3xl font-poppins text-center ">
+              Technologies
+            </h1>
+            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/5 mb-12"></div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+          <div className="flex flex-row flex-wrap justify-between items-center gap-4 p-9 bg-black/30">
+            <BiLogoJavascript className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <BiLogoNodejs className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <SiExpress className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <BiLogoReact className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <TbBrandNextjs className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <SiTailwindcss className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <SiMysql className="text-white w-20 h-20 md:w-24 md:h-24" />
+            <BiLogoMongodb className="text-white w-20 h-20 md:w-24 md:h-24" />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section className="relative">
+        <div className="absolute top-0 right-0 z-0">
+          <Image src={Gradient3} alt="gradient" />
+        </div>
+      </section>
+
+      <section className="mb-8">
+        <div className="md:mb-24 lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+          <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
+            <h2 className="md:mb-5 text-center">
+              <i>" turn your website into</i>
+            </h2>
+
+            <h2>
+              <i className="text-center text-primary">
+                sales & revenue generator.
+              </i>{" "}
+              "
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 md:px-24 mb-8 md:mb-32">
+        <div className="">
+          <div className="flex flex-col justify-center items-center gap-y-2">
+            <h1 className="text-white text-3xl font-poppins text-center ">
+              Portfolios
+            </h1>
+            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded">
+              <Image
+                src={DigitalPa}
+                alt="project-digitalpa"
+                width={500}
+                height={500}
+                className="rounded"
+              />
+              <span className="text-2xl font-medium">Digital-PA</span>
+              <span className="text-2xl font-medium">Web Application</span>
+            </div>
+
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded">
+              <Image
+                src={Suma}
+                alt="project-digitalpa"
+                width={500}
+                height={500}
+                className="rounded"
+              />
+              <span className="text-2xl font-medium">Digital-PA</span>
+              <span className="text-2xl font-medium">Web Application</span>
+            </div>
+
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-8 rounded">
+              <Image
+                src={TheButterfly}
+                alt="project-digitalpa"
+                width={500}
+                height={500}
+                className="rounded"
+              />
+              <span className="text-2xl font-medium">Digital-PA</span>
+              <span className="text-2xl font-medium">Web Application</span>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section>
+        <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+          <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
+            <h2 className="md:mb-5 text-center">
+              <i>" Elevate Your Business</i>
+            </h2>
+            <h2 className="md:mb-5">
+              <i>with </i>
+            </h2>
+            <h2>
+              <i className="text-center text-primary">
+                Cutting-Edge Development.
+              </i>{" "}
+              "
+            </h2>
+          </div>
+        </div>
+      </section>
+      
+      <section className="container pt-96 md:px-24">
+        <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+          <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
+            <h2 className="md:mb-5 text-center">
+              <i>" Elevate Your Business</i>
+            </h2>
+            <h2 className="md:mb-5">
+              <i>with </i>
+            </h2>
+            <h2>
+              <i className="text-center text-primary">
+                Cutting-Edge Development.
+              </i>{" "}
+              "
+            </h2>
+          </div>
+        </div>
+        <div className="bg-black/40 p-10">
+          <h2 className="text-3xl text-white font-semibold text-center mb-16">
+            Contact Me
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <form className="flex flex-col gap-y-4 items-center justify-center">
+            <div className="flex flex-col gap-y-2 w-1/3">
+              <label className="text-lg text-white">Fullname</label>
+              <input
+                type="text"
+                placeholder="Fullname"
+                className="input input-bordered input-primary w-full max-w-xs"
+              />
+            </div>
+
+            <div className="flex flex-col gap-y-2 w-1/3">
+              <label className="text-lg text-white">Phone</label>
+              <input
+                type="text"
+                placeholder="Phone"
+                className="input input-bordered input-primary w-full max-w-xs"
+              />
+            </div>
+
+            <div className="flex flex-col gap-y-2 w-1/3">
+              <label className="text-lg text-white">Email</label>
+              <input
+                type="text"
+                placeholder="Email"
+                className="input input-bordered input-primary w-full max-w-xs"
+              />
+            </div>
+            <img src="/assets/" />
+          </form>
+        </div>
+      </section>
+      <Footer />
+      <div></div>
     </main>
-  )
+  );
 }
