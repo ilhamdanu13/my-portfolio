@@ -43,19 +43,19 @@ const Navbar = () => {
 
         <ul className="md:flex md:gap-x-10 hidden">
           <li>
-            <Link href={"#"}>Services</Link>
+            <Link href={"#about"} scroll={false}>About</Link>
           </li>
 
           <li>
-            <Link href={"#"}>Portfolio</Link>
+            <Link href={"#services"} scroll={false}>Services</Link>
           </li>
 
           <li>
-            <Link href={"#"}>Contact</Link>
+            <Link href={"#portfolios"} scroll={false}>Portfolios</Link>
           </li>
 
           <li>
-            <Link href={"#"}>About</Link>
+            <Link href={"#contact"} scroll={false}>Contact</Link>
           </li>
         </ul>
       </div>

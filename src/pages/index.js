@@ -9,22 +9,24 @@ import {
   BiLogoMongodb,
 } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
-import Portfolios from "@/components/Portfolios";
 import Image from "next/image";
 import Gradient2 from "@/./assets/images/Gradient2.png";
 import Gradient3 from "@/./assets/images/Gradient3.png";
+import Gradient4 from "@/./assets/images/Gradient4.png";
 import DigitalPa from "@/assets/projects/project-digitalpa.webp";
 import Suma from "@/assets/projects/project-suma.webp";
 import TheButterfly from "@/assets/projects/project-thebutterfly.webp";
+import WebDev from "@/assets/projects/webdev.webp"
+import Ai from "@/assets/projects/ai.webp"
 
 export default function Home() {
   return (
     <main className="bg-[#091427] font-poppins">
       <section className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative md:mb-32 mb-16">
-        <div className=" md:py-10  ">
+        <div className=" md:py-10 mx-auto container">
           <Navbar />
 
-          <div className="container px-4 md:px-24 flex md:flex-row flex-col-reverse gap-y-4">
+          <div id="about" className="container px-4 md:px-24 flex md:flex-row flex-col-reverse gap-y-4">
             <div className="">
               <h1 className="text-[#868490] text-xl md:text-3xl font-semibold md:mb-10 mb-5 hidden md:block">
                 FULLSTACK WEB DEVELOPER
@@ -78,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Tagline 1*/}
-      <section className="mb-16">
+      <section className="mb-16 container mx-auto">
         {/* Desktop */}
         <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="md:text-2xl lg:text-3xl uppercase font-syne text-white">
@@ -103,7 +105,7 @@ export default function Home() {
         </div>
 
         {/* Mobile */}
-        <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white font-bold lg:hidden text-center">
+        <div className="container mx-auto text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white font-bold lg:hidden text-center">
           <h2>
             <i>
               " From Vision to Reality{" "}
@@ -121,9 +123,9 @@ export default function Home() {
         </div>
       </section>
 
-    {/* Technologies */}
-      <section className="md:mb-32 mb-16 relative">
-        <div className="px-4 md:px-0 ">
+      {/* Technologies */}
+      <section className=" md:mb-32 mb-16 relative">
+        <div className="container mx-auto px-4 md:px-0 ">
           <div className="flex flex-col justify-center items-center gap-y-2">
             <h1 className="text-white text-3xl font-poppins text-center ">
               Technologies
@@ -150,7 +152,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-8">
+      <section id="services" className="container mx-auto px-24 flex items-center mb-24">
+        <div>
+          <h2 className="text-5xl text-white w-3/4 leading-relaxed">
+            My Awesome Service
+          </h2>
+        </div>
+
+        <div>
+          <div className="bg-white/10 p-8 flex items-center gap-x-8 mb-8 rounded">
+            <Image
+              src={WebDev}
+              alt="Web App"
+              width={200}
+              height={200}
+              className="rounded object-cover"
+            />
+            <div className="text-white flex flex-col justify-center gap-y-2">
+              <span className="text-white text-2xl">Web Development</span>
+              <span className="text-xl">6+ Project</span>
+            </div>
+
+            <div>
+              <BsArrowRight className="text-[#F8E7A1] w-8 h-8" />
+            </div>
+          </div>
+
+          <div className="bg-white/10 p-8 flex items-center gap-x-8 rounded">
+            <Image
+              src={Ai}
+              alt="Web App"
+              width={200}
+              height={200}
+              className="rounded object-cover"
+            />
+
+            <div className="text-white flex flex-col justify-center gap-y-2">
+              <span className="text-white text-2xl">Machine Learning</span>
+              <span className="text-xl">10+ Project</span>
+            </div>
+
+            <div>
+              <BsArrowRight className="text-[#F8E7A1] w-8 h-8" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto mb-8">
         <div className="md:mb-24 lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
             <h2 className="md:mb-5 text-center">
@@ -167,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 md:px-24 mb-8 md:mb-32">
+      <section id="portfolios" className="container mx-auto px-4 mb-8 md:mb-32">
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-2">
             <h1 className="text-white text-3xl font-poppins text-center ">
@@ -177,7 +226,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded z-50">
               <Image
                 src={DigitalPa}
                 alt="project-digitalpa"
@@ -189,7 +238,7 @@ export default function Home() {
               <span className="text-2xl font-medium">Web Application</span>
             </div>
 
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded z-50">
               <Image
                 src={Suma}
                 alt="project-digitalpa"
@@ -215,27 +264,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-  
-      <section>
-        <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
-          <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
-            <h2 className="md:mb-5 text-center">
-              <i>" Elevate Your Business</i>
-            </h2>
-            <h2 className="md:mb-5">
-              <i>with </i>
-            </h2>
-            <h2>
-              <i className="text-center text-primary">
-                Cutting-Edge Development.
-              </i>{" "}
-              "
-            </h2>
-          </div>
+
+      {/* <section className="relative">
+        <div className="absolute top-10 z-0">
+          <Image src={Gradient4} alt="gradient" />
         </div>
-      </section>
+      </section> */}
       
-      <section className="container pt-96 md:px-24">
+      <section className="container mx-auto">
         <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
             <h2 className="md:mb-5 text-center">
@@ -252,41 +288,48 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <div className="bg-black/40 p-10">
-          <h2 className="text-3xl text-white font-semibold text-center mb-16">
-            Contact Me
-          </h2>
-          <form className="flex flex-col gap-y-4 items-center justify-center">
-            <div className="flex flex-col gap-y-2 w-1/3">
-              <label className="text-lg text-white">Fullname</label>
-              <input
-                type="text"
-                placeholder="Fullname"
-                className="input input-bordered input-primary w-full max-w-xs"
-              />
-            </div>
+      </section>
 
-            <div className="flex flex-col gap-y-2 w-1/3">
-              <label className="text-lg text-white">Phone</label>
-              <input
-                type="text"
-                placeholder="Phone"
-                className="input input-bordered input-primary w-full max-w-xs"
-              />
-            </div>
+      <section id="contact" className="container mx-auto md:px-24 mb-24">
+        <div className="">
+          <div className="bg-white/10 p-10">
+            <h2 className="text-3xl text-white font-semibold text-center mb-16">
+              Contact Me
+            </h2>
+            
+            <form className="flex flex-col gap-y-4 items-center justify-center">
+              <div className="flex flex-col gap-y-2 w-1/3">
+                <label className="text-lg text-white">Fullname</label>
+                <input
+                  type="text"
+                  placeholder="Fullname"
+                  className="input input-bordered input-primary w-full"
+                />
+              </div>
 
-            <div className="flex flex-col gap-y-2 w-1/3">
-              <label className="text-lg text-white">Email</label>
-              <input
-                type="text"
-                placeholder="Email"
-                className="input input-bordered input-primary w-full max-w-xs"
-              />
-            </div>
-            <img src="/assets/" />
-          </form>
+              <div className="flex flex-col gap-y-2 w-1/3">
+                <label className="text-lg text-white">Phone</label>
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  className="input input-bordered input-primary w-full"
+                />
+              </div>
+
+              <div className="flex flex-col gap-y-2 w-1/3">
+                <label className="text-lg text-white">Email</label>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="input input-bordered input-primary w-full"
+                />
+              </div>
+             
+            </form>
+          </div>
         </div>
       </section>
+
       <Footer />
       <div></div>
     </main>
