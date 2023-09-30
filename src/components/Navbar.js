@@ -51,7 +51,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"#portfolios"} scroll={false}>Portfolios</Link>
+            <Link href={"#portfolios"} scroll={false}>Projects</Link>
           </li>
 
           <li>
@@ -87,7 +87,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={"#portfolios"} scroll={false} onClick={() => setMenu(false)}>Portfolios</Link>
+            <Link href={"#portfolios"} scroll={false} onClick={() => setMenu(false)}>Projects</Link>
           </li>
 
           <li>

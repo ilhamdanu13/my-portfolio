@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BsArrowRight } from "react-icons/bs";
@@ -12,7 +13,6 @@ import { TbBrandNextjs } from "react-icons/tb";
 import Image from "next/image";
 import Gradient2 from "@/./assets/images/Gradient2.png";
 import Gradient3 from "@/./assets/images/Gradient3.png";
-import Gradient4 from "@/./assets/images/Gradient4.png";
 import DigitalPa from "@/assets/projects/project-digitalpa.webp";
 import Suma from "@/assets/projects/project-suma.webp";
 import TheButterfly from "@/assets/projects/project-thebutterfly.webp";
@@ -134,7 +134,7 @@ export default function Home() {
             <h1 className="text-white text-3xl font-poppins text-center ">
               Technologies
             </h1>
-            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/5 mb-12"></div>
+            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
           </div>
 
           <div className="flex flex-row flex-wrap justify-between items-center gap-4 md:gap-20 lg:gap-4 p-9 bg-black/30">
@@ -230,13 +230,13 @@ export default function Home() {
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-2">
             <h1 className="text-white text-2xl md:text-3xl font-poppins text-center  ">
-              Portfolios
+              Latest Projects
             </h1>
             <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
+            <Link href={'https://digital-pa.com.sg'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
               <Image
                 src={DigitalPa}
                 alt="project-digitalpa"
@@ -247,10 +247,10 @@ export default function Home() {
               <span className="text-xl lg:text-2xl font-medium">
                 Digital-PA
               </span>
-              <span className="lg:text-2xl font-medium">Web Application</span>
-            </div>
+              <span className="lg:text-xl font-medium">Web Application</span>
+            </Link>
 
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
+            <Link href={'https://suma.sg'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
               <Image
                 src={Suma}
                 alt="project-suma"
@@ -261,10 +261,10 @@ export default function Home() {
               <span className="text-xl lg:text-2xl font-medium">
                 Suma Singapore
               </span>
-              <span className="lg:text-2xl font-medium">Web Application</span>
-            </div>
+              <span className="lg:text-xl font-medium">Web Application</span>
+            </Link>
 
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded">
+            <Link href={'https://thebutterfly.id'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded">
               <Image
                 src={TheButterfly}
                 alt="project-thebutterfy"
@@ -275,8 +275,8 @@ export default function Home() {
               <span className="text-xl lg:text-2xl font-medium">
                 The Butterfly
               </span>
-              <span className="lg:text-2xl font-medium">Web Application</span>
-            </div>
+              <span className="lg:text-xl font-medium">Web Application</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -344,8 +344,13 @@ export default function Home() {
                 />
               </div>
 
+              <div className="flex flex-col gap-y-2 lg:w-1/3">
+                <label className="text-lg text-white">Message</label>
+                <textarea className="textarea textarea-primary text-base" placeholder="Message"></textarea>
+              </div>
+
               <div className="lg:w-1/3 pt-8">
-                <button className="btn btn-active btn-primary w-full">
+                <button type="button" className="btn btn-active btn-primary w-full">
                   Send
                 </button>
               </div>
