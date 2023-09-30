@@ -16,30 +16,34 @@ import Gradient4 from "@/./assets/images/Gradient4.png";
 import DigitalPa from "@/assets/projects/project-digitalpa.webp";
 import Suma from "@/assets/projects/project-suma.webp";
 import TheButterfly from "@/assets/projects/project-thebutterfly.webp";
-import WebDev from "@/assets/projects/webdev.webp"
-import Ai from "@/assets/projects/ai.webp"
+import WebDev from "@/assets/projects/webdev.webp";
+import Ai from "@/assets/projects/ai.webp";
+import ScrollTop from "@/components/ScrollTop";
 
 export default function Home() {
   return (
     <main className="bg-[#091427] font-poppins">
-      <section className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative md:mb-32 mb-16">
+      <section id="/" className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative lg:mb-32 mb-16">
         <div className=" md:py-10 mx-auto container">
           <Navbar />
 
-          <div id="about" className="container px-4 md:px-24 flex md:flex-row flex-col-reverse gap-y-4">
+          <div
+            id="about"
+            className="container px-4 md:px-16 lg:px-24 flex md:flex-row flex-col-reverse gap-y-4"
+          >
             <div className="">
-              <h1 className="text-[#868490] text-xl md:text-3xl font-semibold md:mb-10 mb-5 hidden md:block">
+              <h1 className="text-[#868490] text-xl md:text-2xl lg:text-3xl font-semibold lg:mb-10 mb-5 hidden md:block">
                 FULLSTACK WEB DEVELOPER
               </h1>
 
-              <div className="md:flex flex-col gap-y-4 mb-8 hidden">
-                <span className="font-semibold text-white text-2xl md:text-4xl  ">
+              <div className="md:flex flex-col gap-y-4 mb-8 md:mb-5 lg:mb-8 hidden">
+                <span className="font-semibold text-white text-2xl lg:text-4xl  ">
                   Ilham Danu
                 </span>
-                <div className=" border-b-4 rounded border-[#F8E7A1] w-max md:w-52 mb-3"></div>
+                <div className=" border-b-4 rounded border-[#F8E7A1] w-max md:w-36 lg:w-52 mb-3"></div>
               </div>
 
-              <p className="text-[#868490] md:text-xl md:leading-9 leading-6 mb-9 md:w-2/3">
+              <p className="text-[#868490] lg:text-xl lg:leading-9 leading-6 mb-9 md:mb-5 lg:mb-9 md:w-5/6 lg:w-2/3">
                 An adaptive and fast learner Fullstack Developer. Now using
                 React, React Native, Express to develop web and mobile apps.
                 Have made several projects such as an e-wallet web app using
@@ -74,13 +78,13 @@ export default function Home() {
       </section>
 
       <section className="relative">
-        <div className="absolute  md:-top-36 top-40 z-0">
+        <div className="absolute  lg:-top-36 md:top-0 top-40 z-0">
           <Image src={Gradient2} alt="gradient" />
         </div>
       </section>
 
       {/* Tagline 1*/}
-      <section className="mb-16 container mx-auto">
+      <section className="mb-16 container mx-auto md:px-16 lg:px-0">
         {/* Desktop */}
         <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="md:text-2xl lg:text-3xl uppercase font-syne text-white">
@@ -124,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Technologies */}
-      <section className=" md:mb-32 mb-16 relative">
+      <section className=" lg:mb-32 mb-16 relative">
         <div className="container mx-auto px-4 md:px-0 ">
           <div className="flex flex-col justify-center items-center gap-y-2">
             <h1 className="text-white text-3xl font-poppins text-center ">
@@ -133,7 +137,7 @@ export default function Home() {
             <div className=" border-b-4 rounded border-[#F8E7A1] w-1/5 mb-12"></div>
           </div>
 
-          <div className="flex flex-row flex-wrap justify-between items-center gap-4 p-9 bg-black/30">
+          <div className="flex flex-row flex-wrap justify-between items-center gap-4 md:gap-20 lg:gap-4 p-9 bg-black/30">
             <BiLogoJavascript className="text-white w-20 h-20 md:w-24 md:h-24" />
             <BiLogoNodejs className="text-white w-20 h-20 md:w-24 md:h-24" />
             <SiExpress className="text-white w-20 h-20 md:w-24 md:h-24" />
@@ -147,26 +151,29 @@ export default function Home() {
       </section>
 
       <section className="relative">
-        <div className="absolute top-0 right-0 z-0">
+        <div className="absolute top-0 md:top-72 lg:top-0 right-0 z-0">
           <Image src={Gradient3} alt="gradient" />
         </div>
       </section>
 
-      <section id="services" className="container mx-auto px-24 flex items-center mb-24">
-        <div>
-          <h2 className="text-5xl text-white w-3/4 leading-relaxed">
+      <section
+        id="services"
+        className="container mx-auto px-4 md:px-16 lg:px-24 flex flex-col lg:flex-row items-center mb-16"
+      >
+        <div className="mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl md:text-center lg:text-left text-white lg:w-3/4 leading-relaxed">
             My Awesome Service
           </h2>
         </div>
 
-        <div>
-          <div className="bg-white/10 p-8 flex items-center gap-x-8 mb-8 rounded">
+        <div className="flex flex-col">
+          <div className="bg-white/10 p-4 md:p-8 flex flex-col md:flex-row md:items-center gap-y-4 gap-x-8 mb-8 rounded z-50">
             <Image
               src={WebDev}
               alt="Web App"
               width={200}
               height={200}
-              className="rounded object-cover"
+              className="rounded object-cover w-full md:w-max"
             />
             <div className="text-white flex flex-col justify-center gap-y-2">
               <span className="text-white text-2xl">Web Development</span>
@@ -178,13 +185,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-white/10 p-8 flex items-center gap-x-8 rounded">
+          <div className="bg-white/10 p-4 md:p-8 flex flex-col md:flex-row md:items-center gap-y-4 gap-x-8 rounded z-50">
             <Image
               src={Ai}
               alt="Web App"
               width={200}
               height={200}
-              className="rounded object-cover"
+              className="rounded object-cover w-full md:w-max"
             />
 
             <div className="text-white flex flex-col justify-center gap-y-2">
@@ -199,8 +206,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto mb-8">
-        <div className="md:mb-24 lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+      <section className="container mx-auto mb-8 md:mb-16 lg:mb-24">
+        <div className="lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
             <h2 className="md:mb-5 text-center">
               <i>" turn your website into</i>
@@ -216,17 +223,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolios" className="container mx-auto px-4 mb-8 md:mb-32">
+      <section
+        id="portfolios"
+        className="container mx-auto px-4 mb-8 md:mb-16 lg:mb-32"
+      >
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-2">
-            <h1 className="text-white text-3xl font-poppins text-center ">
+            <h1 className="text-white text-2xl md:text-3xl font-poppins text-center  ">
               Portfolios
             </h1>
             <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded z-50">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
               <Image
                 src={DigitalPa}
                 alt="project-digitalpa"
@@ -234,32 +244,38 @@ export default function Home() {
                 height={500}
                 className="rounded"
               />
-              <span className="text-2xl font-medium">Digital-PA</span>
-              <span className="text-2xl font-medium">Web Application</span>
+              <span className="text-xl lg:text-2xl font-medium">
+                Digital-PA
+              </span>
+              <span className="lg:text-2xl font-medium">Web Application</span>
             </div>
 
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-8 rounded z-50">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
               <Image
                 src={Suma}
-                alt="project-digitalpa"
+                alt="project-suma"
                 width={500}
                 height={500}
                 className="rounded"
               />
-              <span className="text-2xl font-medium">Digital-PA</span>
-              <span className="text-2xl font-medium">Web Application</span>
+              <span className="text-xl lg:text-2xl font-medium">
+                Suma Singapore
+              </span>
+              <span className="lg:text-2xl font-medium">Web Application</span>
             </div>
 
-            <div className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-8 rounded">
+            <div className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded">
               <Image
                 src={TheButterfly}
-                alt="project-digitalpa"
+                alt="project-thebutterfy"
                 width={500}
                 height={500}
                 className="rounded"
               />
-              <span className="text-2xl font-medium">Digital-PA</span>
-              <span className="text-2xl font-medium">Web Application</span>
+              <span className="text-xl lg:text-2xl font-medium">
+                The Butterfly
+              </span>
+              <span className="lg:text-2xl font-medium">Web Application</span>
             </div>
           </div>
         </div>
@@ -270,7 +286,7 @@ export default function Home() {
           <Image src={Gradient4} alt="gradient" />
         </div>
       </section> */}
-      
+
       <section className="container mx-auto">
         <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
@@ -290,15 +306,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="container mx-auto md:px-24 mb-24">
+      <section
+        id="contact"
+        className="container mx-auto lg:px-24 md:px-16 px-4 mb-24"
+      >
         <div className="">
           <div className="bg-white/10 p-10">
-            <h2 className="text-3xl text-white font-semibold text-center mb-16">
+            <h2 className="text-2xl md:text-3xl text-white text-center mb-8 md:mb-16">
               Contact Me
             </h2>
-            
-            <form className="flex flex-col gap-y-4 items-center justify-center">
-              <div className="flex flex-col gap-y-2 w-1/3">
+
+            <form className="flex flex-col gap-y-4 lg:items-center justify-center">
+              <div className="flex flex-col gap-y-2 lg:w-1/3">
                 <label className="text-lg text-white">Fullname</label>
                 <input
                   type="text"
@@ -307,7 +326,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="flex flex-col gap-y-2 w-1/3">
+              <div className="flex flex-col gap-y-2 lg:w-1/3">
                 <label className="text-lg text-white">Phone</label>
                 <input
                   type="text"
@@ -316,7 +335,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="flex flex-col gap-y-2 w-1/3">
+              <div className="flex flex-col gap-y-2 lg:w-1/3">
                 <label className="text-lg text-white">Email</label>
                 <input
                   type="text"
@@ -324,14 +343,19 @@ export default function Home() {
                   className="input input-bordered input-primary w-full"
                 />
               </div>
-             
+
+              <div className="lg:w-1/3 pt-8">
+                <button className="btn btn-active btn-primary w-full">
+                  Send
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </section>
 
       <Footer />
-      <div></div>
+      <ScrollTop/>
     </main>
   );
 }

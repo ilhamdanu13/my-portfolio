@@ -10,19 +10,19 @@ const Footer = () => {
 
         <div className="flex gap-x-10">
           <a href="https://github.com/ilhamdanu13" target="_blank">
-          <FiGithub className="w-10 h-10" />
+          <FiGithub className="w-8 h-8 md:w-10 md:h-10" />
           </a>
 
           <a href="https://www.instagram.com/iam.danu/" target="_blank">
-          <FiInstagram className="w-10 h-10" />
+          <FiInstagram className="w-8 h-8 md:w-10 md:h-10" />
           </a>
 
           <a href="https://www.linkedin.com/in/ilhamdanu13/" target="_blank">
-          <AiOutlineLinkedin className="w-10 h-10" />
+          <AiOutlineLinkedin className="w-8 h-8 md:w-10 md:h-10" />
           </a>
 
           <a href="mailto:ilham.danu13.id@gmail.com">
-          <AiOutlineMail className="w-10 h-10" />
+          <AiOutlineMail className="w-8 h-8 md:w-10 md:h-10" />
           </a>
         </div>
       </div>

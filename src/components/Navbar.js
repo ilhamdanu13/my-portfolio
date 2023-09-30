@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Desktop */}
-      <div className="text-[#E5E5E5] md:flex font-poppins items-center md:mb-32 mb-10 hidden px-4 md:px-24">
+      <div className="text-[#E5E5E5] md:flex font-poppins items-center md:mb-32 mb-10 hidden px-4 md:px-16 lg:px-24">
         <div className="flex-1">
           <div className="flex">
             <h1 className="text-2xl font-bold mr-2">DANU DEV</h1>
@@ -77,19 +77,32 @@ const Navbar = () => {
           <div onClick={() => setMenu(false)} className="flex justify-end px-4 mb-16">
             <AiOutlineClose className="w-8 h-8 text-white" />
           </div>
-          <ul className="flex flex-col items-center gap-y-4 text-xl">
-            <li>
-              <Link href={"#"}>Services</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Portfolio</Link>
-            </li>
-            <li>
-              <Link href={"#"}>Contact</Link>
-            </li>
-            <li>
-              <Link href={"#"}>About</Link>
-            </li>
+          <ul className="flex flex-col items-center gap-y-10 text-xl">
+          <li>
+            <Link href={"#about"} scroll={false} onClick={() => setMenu(false)}>About</Link>
+          </li>
+
+          <li>
+            <Link href={"#services"} scroll={false} onClick={() => setMenu(false)}>Services</Link>
+          </li>
+
+          <li>
+            <Link href={"#portfolios"} scroll={false} onClick={() => setMenu(false)}>Portfolios</Link>
+          </li>
+
+          <li>
+            <Link href={"#contact"} scroll={false} onClick={() => setMenu(false)}>Contact</Link>
+          </li>
+
+          <div className="flex">
+            <h1 className="font-bold mr-2">DANU DEV</h1>
+
+            <img
+              src="Ellipse 2628.png"
+              alt="ellipse"
+              className="w-2 h-2 mt-1"
+            />
+          </div>
           </ul>
         </div>
       </div>
