@@ -23,7 +23,10 @@ import ScrollTop from "@/components/ScrollTop";
 export default function Home() {
   return (
     <main className="bg-[#091427] font-poppins">
-      <section id="/" className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative lg:mb-32 mb-16">
+      <section
+        id="/"
+        className="bg-[url('../assets/images/Gradient1.png')] md:bg-cover relative lg:mb-32 mb-16"
+      >
         <div className=" md:py-10 mx-auto container">
           <Navbar />
 
@@ -43,9 +46,9 @@ export default function Home() {
                 <div className=" border-b-4 rounded border-[#F8E7A1] w-max md:w-36 lg:w-52 mb-3"></div>
               </div>
 
-              <p className="text-[#868490] lg:text-xl lg:leading-9 leading-6 mb-9 md:mb-5 lg:mb-9 md:w-5/6 lg:w-2/3">
-                An adaptive and fast learner Fullstack Developer. Now using
-                React, React Native, Express to develop web and mobile apps.
+              <p className="text-[#868490] lg:text-xl lg:leading-9 mb-9 md:mb-5 lg:mb-9 md:w-5/6 lg:w-2/3">
+                An adaptive and fast learner Fullstack Web Developer. Now using
+                React, React Native, Express and other Javascript frameworks to develop web and mobile apps.
                 Have made several projects such as an e-wallet web app using
                 Next, ticket movie web & mobile app using React, and more. Also
                 can work well as part of team, hardworker and eager to learn.
@@ -131,10 +134,10 @@ export default function Home() {
       <section className=" lg:mb-32 mb-16 relative">
         <div className="container mx-auto px-4 md:px-0 ">
           <div className="flex flex-col justify-center items-center gap-y-2">
-            <h1 className="text-white text-3xl font-poppins text-center ">
+            <h1 className="text-white text-3xl font-poppins text-center md:border-0 border-b-4 border-[#F8E7A1]">
               Technologies
             </h1>
-            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
+            <div className=" border-b-4 rounded border-[#F8E7A1] md:w-1/6 mb-12"></div>
           </div>
 
           <div className="flex flex-row flex-wrap justify-between items-center gap-4 md:gap-20 lg:gap-4 p-9 bg-black/30">
@@ -175,14 +178,18 @@ export default function Home() {
               height={200}
               className="rounded object-cover w-full md:w-max"
             />
+            
             <div className="text-white flex flex-col justify-center gap-y-2">
-              <span className="text-white text-2xl">Web Development</span>
-              <span className="text-xl">6+ Project</span>
+              <span className="text-white text-2xl w-max">Web Development</span>
+              <div className="flex justify-between">
+                <span className="text-xl">6+ Project</span>
+                <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" />
+              </div>
             </div>
 
-            <div>
-              <BsArrowRight className="text-[#F8E7A1] w-8 h-8" />
-            </div>
+            {/* <div>
+              <BsArrowRight className="text-[#F8E7A1] w-8 h-8 hidden md:block" />
+            </div> */}
           </div>
 
           <div className="bg-white/10 p-4 md:p-8 flex flex-col md:flex-row md:items-center gap-y-4 gap-x-8 rounded z-50">
@@ -196,12 +203,15 @@ export default function Home() {
 
             <div className="text-white flex flex-col justify-center gap-y-2">
               <span className="text-white text-2xl">Machine Learning</span>
-              <span className="text-xl">10+ Project</span>
+              <div className="flex justify-between">
+                <span className="text-xl">10+ Project</span>
+                <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" />
+              </div>
             </div>
 
-            <div>
-              <BsArrowRight className="text-[#F8E7A1] w-8 h-8" />
-            </div>
+            {/* <div>
+              <BsArrowRight className="text-[#F8E7A1] w-8 h-8 hidden md:block" />
+            </div> */}
           </div>
         </div>
       </section>
@@ -229,14 +239,18 @@ export default function Home() {
       >
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-2">
-            <h1 className="text-white text-2xl md:text-3xl font-poppins text-center  ">
+            <h1 className="text-white text-2xl md:text-3xl font-poppins text-center md:border-0 border-b-4 border-[#F8E7A1] ">
               Latest Projects
             </h1>
-            <div className=" border-b-4 rounded border-[#F8E7A1] w-1/6 mb-12"></div>
+            <div className=" border-b-4 rounded border-[#F8E7A1] md:w-1/6 mb-12"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <Link href={'https://digital-pa.com.sg'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
+            <Link
+              href={"https://digital-pa.com.sg"}
+              target="_blank"
+              className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50"
+            >
               <Image
                 src={DigitalPa}
                 alt="project-digitalpa"
@@ -250,7 +264,11 @@ export default function Home() {
               <span className="lg:text-xl font-medium">Web Application</span>
             </Link>
 
-            <Link href={'https://suma.sg'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50">
+            <Link
+              href={"https://suma.sg"}
+              target="_blank"
+              className="flex flex-col items-center gap-y-4 bg-white/10 p-4 lg:p-8 rounded z-50"
+            >
               <Image
                 src={Suma}
                 alt="project-suma"
@@ -264,7 +282,11 @@ export default function Home() {
               <span className="lg:text-xl font-medium">Web Application</span>
             </Link>
 
-            <Link href={'https://thebutterfly.id'} target="_blank" className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded">
+            <Link
+              href={"https://thebutterfly.id"}
+              target="_blank"
+              className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded"
+            >
               <Image
                 src={TheButterfly}
                 alt="project-thebutterfy"
@@ -287,8 +309,25 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="container mx-auto">
-        <div className="md:mb-24 hidden lg:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+      <section className="container mx-auto md:mb-16 mb-8">
+        <div className="md:mb-24 hidden md:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
+          <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
+            <h2 className="md:mb-5 text-center">
+              <i>" Elevate Your Business</i>
+            </h2>
+            <h2 className="md:mb-5">
+              <i>with </i>
+            </h2>
+            <h2>
+              <i className="text-center text-primary">
+                Cutting-Edge Development.
+              </i>{" "}
+              "
+            </h2>
+          </div>
+        </div>
+
+        <div className="md:mb-24 md:hidden flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
             <h2 className="md:mb-5 text-center">
               <i>" Elevate Your Business</i>
@@ -311,7 +350,7 @@ export default function Home() {
         className="container mx-auto lg:px-24 md:px-16 px-4 mb-24"
       >
         <div className="">
-          <div className="bg-white/10 p-10">
+          <div className="bg-white/10 p-4 md:p-10">
             <h2 className="text-2xl md:text-3xl text-white text-center mb-8 md:mb-16">
               Contact Me
             </h2>
@@ -346,11 +385,17 @@ export default function Home() {
 
               <div className="flex flex-col gap-y-2 lg:w-1/3">
                 <label className="text-lg text-white">Message</label>
-                <textarea className="textarea textarea-primary text-base" placeholder="Message"></textarea>
+                <textarea
+                  className="textarea textarea-primary text-base"
+                  placeholder="Message"
+                ></textarea>
               </div>
 
               <div className="lg:w-1/3 pt-8">
-                <button type="button" className="btn btn-active btn-primary w-full">
+                <button
+                  type="button"
+                  className="btn btn-active btn-primary w-full"
+                >
                   Send
                 </button>
               </div>
@@ -360,7 +405,7 @@ export default function Home() {
       </section>
 
       <Footer />
-      <ScrollTop/>
+      <ScrollTop />
     </main>
   );
 }
