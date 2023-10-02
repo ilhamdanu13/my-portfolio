@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             <div className="">
-              <img src="/Profile.png" alt="profile" className=" " />
+              <img src="/Profile.jpg" alt="profile" className="w-full " />
             </div>
 
             <div className="md:hidden">
@@ -183,7 +183,7 @@ export default function Home() {
               <span className="text-white text-2xl w-max">Web Development</span>
               <div className="flex justify-between">
                 <span className="text-xl">6+ Project</span>
-                <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" />
+                {/* <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" /> */}
               </div>
             </div>
 
@@ -204,8 +204,8 @@ export default function Home() {
             <div className="text-white flex flex-col justify-center gap-y-2">
               <span className="text-white text-2xl">Machine Learning</span>
               <div className="flex justify-between">
-                <span className="text-xl">10+ Project</span>
-                <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" />
+                <span className="text-xl">5+ Project</span>
+                {/* <BsArrowRight className="text-[#F8E7A1] w-8 h-8 md:hidden" /> */}
               </div>
             </div>
 
