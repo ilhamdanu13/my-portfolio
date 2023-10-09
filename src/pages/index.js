@@ -34,7 +34,7 @@ export default function Home() {
             id="about"
             className="container px-4 md:px-16 lg:px-24 flex md:flex-row flex-col-reverse gap-y-4"
           >
-            <div className="">
+            <div className="md:w-2/3">
               <h1 className="text-[#868490] text-xl md:text-2xl lg:text-3xl font-semibold lg:mb-10 mb-5 hidden md:block">
                 FULLSTACK WEB DEVELOPER
               </h1>
@@ -48,10 +48,11 @@ export default function Home() {
 
               <p className="text-[#868490] lg:text-xl lg:leading-9 mb-9 md:mb-5 lg:mb-9 md:w-5/6 lg:w-2/3">
                 An adaptive and fast learner Fullstack Web Developer. Now using
-                React, React Native, Express and other Javascript frameworks to develop web and mobile apps.
-                Have made several projects such as an e-wallet web app using
-                Next, ticket movie web & mobile app using React, and more. Also
-                can work well as part of team, hardworker and eager to learn.
+                React, React Native, Express and other Javascript frameworks to
+                develop web and mobile apps. Have made several projects such as
+                an e-wallet web app using Next, ticket movie web & mobile app
+                using React, and more. Also can work well as part of team,
+                hardworker and eager to learn.
               </p>
 
               <div className="flex items-center gap-x-10">
@@ -60,8 +61,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
-              <img src="/Profile.jpg" alt="profile" className="w-full " />
+            <div className="md:w-1/3">
+              <img src="/Profile.jpg" alt="profile" />
             </div>
 
             <div className="md:hidden">
@@ -161,7 +162,7 @@ export default function Home() {
 
       <section
         id="services"
-        className="container mx-auto px-4 md:px-16 lg:px-24 flex flex-col lg:flex-row items-center mb-16"
+        className="container mx-auto px-4 md:px-16 lg:px-24 flex flex-col lg:flex-row lg:justify-between items-center mb-8 md:mb-16 lg:mb-24"
       >
         <div className="mb-8 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-5xl md:text-center lg:text-left text-white lg:w-3/4 leading-relaxed">
@@ -178,7 +179,7 @@ export default function Home() {
               height={200}
               className="rounded object-cover w-full md:w-max"
             />
-            
+
             <div className="text-white flex flex-col justify-center gap-y-2">
               <span className="text-white text-2xl w-max">Web Development</span>
               <div className="flex justify-between">
@@ -303,12 +304,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="relative">
-        <div className="absolute top-10 z-0">
-          <Image src={Gradient4} alt="gradient" />
-        </div>
-      </section> */}
-
       <section className="container mx-auto md:mb-16 mb-8">
         <div className="md:mb-24 hidden md:flex lg:flex-row flex-col lg:justify-center text-center font-bold">
           <div className="text-lg md:text-2xl lg:text-3xl uppercase font-syne text-white">
@@ -350,7 +345,7 @@ export default function Home() {
         className="container mx-auto lg:px-24 md:px-16 px-4 mb-24"
       >
         <div className="">
-          <div className="bg-white/10 p-4 md:p-10">
+          <div className="bg-white/10 px-4 py-16 md:px-24 md:py-24 lg:px-0 lg:py-24">
             <h2 className="text-2xl md:text-3xl text-white text-center mb-8 md:mb-16">
               Contact Me
             </h2>
