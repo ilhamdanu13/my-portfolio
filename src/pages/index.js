@@ -22,6 +22,7 @@ import ScrollTop from "@/components/ScrollTop";
 
 export default function Home() {
   return (
+    
     <main className="bg-[#091427] font-poppins">
       <section
         id="/"
