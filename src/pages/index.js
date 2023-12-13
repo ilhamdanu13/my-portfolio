@@ -24,6 +24,7 @@ import Head from 'next/head'
 export default function Home() {
   return (
     
+
     <>
       <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-79BXLN2207"></script>
