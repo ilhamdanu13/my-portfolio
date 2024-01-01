@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <link rel="icon" type="image/png" href="/D.png" />
         <title>Danu Dev - Software Engineer</title>
       </Head>
 
