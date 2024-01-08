@@ -422,9 +422,9 @@ export default function Home() {
 
         <section>
           <div className="container mx-auto lg:px-24 md:px-16 px-4 mb-32 z-50 relative">
-            <div className="flex justify-between items-center">
-              <div className="w-1/2 space-y-20">
-                <p className="text-white font-bold text-5xl leading-relaxed ">
+            <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+              <div className="md:w-1/2 space-y-4 md:space-y-20">
+                <p className="text-white font-bold md:text-5xl leading-relaxed ">
                   Want to make awesome and impactful Product?
                 </p>
                 <div className="flex items-center gap-x-10">
@@ -438,7 +438,7 @@ export default function Home() {
                   alt="Hit Me!"
                   width={400}
                   height={400}
-                  className="rounded-md object-cover"
+                  className="rounded-md object-cover mb-4 md:mb-0"
                 />
               </div>
             </div>
@@ -450,7 +450,7 @@ export default function Home() {
           className="container mx-auto lg:px-24 md:px-16 px-4 mb-24 relative z-50"
         >
           <div className="">
-            <div className="bg-white/10 px-4 py-16 md:px-24 md:py-24 lg:px-0 lg:py-24">
+            <div className="bg-black/20 px-4 py-16 md:px-24 md:py-24 lg:px-0 lg:py-24">
               <h2 className="text-2xl md:text-3xl text-white text-center mb-8 md:mb-16">
                 Contact Me
               </h2>
