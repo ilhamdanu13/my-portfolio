@@ -21,9 +21,13 @@ import TheButterfly from "@/assets/projects/project-thebutterfly.webp";
 import SSC from "@/assets/projects/project-ssc.webp";
 import Watten from "@/assets/projects/project-watten.webp";
 import OPA from "@/assets/projects/project-opa.webp";
+import AssetMcu from "@/assets/projects/project-mcu.webp";
+import AssetHoihup from "@/assets/projects/project-hoihup.webp";
+import AssetSpas from "@/assets/projects/project-spas.webp";
 import WebDev from "@/assets/projects/webdev.webp";
 import Ai from "@/assets/projects/ai.webp";
 import AssetHitme from "@/assets/images/hitme.webp";
+import AssetProfile from "@/assets/projects/me.webp";
 import Head from "next/head";
 
 export default function Home() {
@@ -31,20 +35,26 @@ export default function Home() {
     <>
       <Head>
         <link rel="icon" type="image/png" href="/D.png" />
-        <title>Danu Dev - Software Engineer</title>
+        <title>Danu Dev | Software Engineer</title>
+        <meta name="author" content="Ilham Danu" />
+        <meta name="title" content="Danu Dev |   Software Engineer" />
+        <meta
+          name="description"
+          content="Experienced software engineer skilled in developing robust and scalable applications. Proficient in multiple programming languages and frameworks, with a focus on delivering high-quality code. Passionate about problem-solving and staying updated with the latest technologies."
+        />
       </Head>
 
       <main className="bg-[#091427] font-poppins">
         <section
           id="/"
-          className="bg-[url('../assets/images/Gradient1.png')] md:bg-cover relative lg:mb-32 mb-16"
+          className="bg-[url('../assets/images/Gradient1.png')] bg-cover relative lg:mb-32 mb-16"
         >
           <div className=" md:py-10 mx-auto container">
             <Navbar />
 
             <div
               id="about"
-              className="container px-4 md:px-16 lg:px-24 flex md:flex-row flex-col-reverse gap-y-4"
+              className="container px-4 md:px-16 lg:px-24 flex md:flex-row flex-col-reverse gap-y-4 items-center"
             >
               <div className="md:w-2/3">
                 <h1 className="text-[#868490] text-xl md:text-2xl lg:text-3xl font-semibold lg:mb-10 mb-5 hidden md:block">
@@ -74,10 +84,10 @@ export default function Home() {
               </div>
 
               <div className="md:w-1/3">
-                <img
-                  src="/Profile.jpg"
+                <Image
+                  src={AssetProfile}
                   alt="profile"
-                  className="object-cover md:w-3/4"
+                  className="object-cover w-1/2 mx-auto md:w-full aspect-square  rounded-full"
                 />
               </div>
 
@@ -188,8 +198,8 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex flex-col">
-            <div className="bg-white/10 p-4 md:p-8 flex flex-col md:flex-row md:items-center gap-y-4 gap-x-8 mb-8 rounded z-50">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            <div className="bg-white/10 p-4 md:p-8 flex flex-col md:flex-row md:items-center gap-y-4 gap-x-8  rounded z-50">
               <Image
                 src={WebDev}
                 alt="Web App"
@@ -266,7 +276,7 @@ export default function Home() {
               <div className=" border-b-4 rounded border-[#F8E7A1] md:w-1/6 mb-12"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-white">
               <Link
                 href={"https://digital-pa.com.sg"}
                 target="_blank"
@@ -322,7 +332,7 @@ export default function Home() {
               </Link>
 
               <Link
-                href={"https://ssc-jet.vercel.app/"}
+                href={"https://dev.sscsg.com/"}
                 target="_blank"
                 className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded"
               >
@@ -354,7 +364,7 @@ export default function Home() {
                 <span className="text-xl lg:text-2xl font-medium">
                   Watten House
                 </span>
-                <span className="lg:text-xl font-medium">Web Application</span>
+                <span className="lg:text-xl font-medium">Landing Page</span>
               </Link>
 
               <Link
@@ -371,6 +381,60 @@ export default function Home() {
                 />
                 <span className="text-xl lg:text-2xl font-medium">
                   Oil Palm Assistant (OPA)
+                </span>
+                <span className="lg:text-xl font-medium">Web Application</span>
+              </Link>
+
+              <Link
+                href={"https://motorcheckup.sg/"}
+                target="_blank"
+                className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded"
+              >
+                <Image
+                  src={AssetMcu}
+                  alt="Project Opa"
+                  width={500}
+                  height={500}
+                  className="rounded"
+                />
+                <span className="text-xl lg:text-2xl font-medium">
+                  MotorCheckUp Singapore
+                </span>
+                <span className="lg:text-xl font-medium">Web Application</span>
+              </Link>
+
+              <Link
+                href={"https://spas.com.sg/"}
+                target="_blank"
+                className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded"
+              >
+                <Image
+                  src={AssetSpas}
+                  alt="Project Opa"
+                  width={500}
+                  height={500}
+                  className="rounded"
+                />
+                <span className="text-xl lg:text-2xl font-medium w-max">
+                  Spa Singapore Association
+                </span>
+                <span className="lg:text-xl font-medium">Web Application</span>
+              </Link>
+
+              <Link
+                href={"https://hoihup-thecontinuum.sg/"}
+                target="_blank"
+                className="flex flex-col items-center gap-y-4 bg-white/10 z-50 p-4 lg:p-8 rounded"
+              >
+                <Image
+                  src={AssetHoihup}
+                  alt="Project Opa"
+                  width={500}
+                  height={500}
+                  className="rounded"
+                />
+                <span className="text-xl lg:text-2xl font-medium">
+                  Hoihup The Continuum
                 </span>
                 <span className="lg:text-xl font-medium">Web Application</span>
               </Link>
@@ -421,7 +485,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="container mx-auto lg:px-24 md:px-16 px-4 mb-32 z-50 relative">
+          <div className="container mx-auto lg:px-24 md:px-16 px-4 mb-12 md:mb-32 z-50 relative">
             <div className="flex flex-col-reverse md:flex-row justify-between items-center">
               <div className="md:w-1/2 space-y-4 md:space-y-20">
                 <p className="text-white font-bold md:text-5xl leading-relaxed ">
